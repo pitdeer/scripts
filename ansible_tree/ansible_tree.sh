@@ -1,10 +1,16 @@
 #!/bin/bash
 
+#run this in the folder that you want to have your ansible playbook config
+
+mkdir group_vars roles
+touch sites.yml
+ 
 for i in common bind nginx mysql php-fpm wordpress
 
 do
-mkdir -p ./$i/tasks && touch ./$i/tasks/main.yml
-mkdir -p ./$i/handlers && touch ./$i/handlers/main.yml
-mkdir -p ./$i/templates && touch ./$i/templates/main.yml
+mkdir -p roles/$i/tasks && touch roles/$i/tasks/main.yml
+mkdir -p roles/$i/handlers && touch roles/$i/handlers/main.yml
+mkdir -p roles/$i/templates && touch roles/$i/templates/main.yml
 done
+
 
