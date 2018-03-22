@@ -3,7 +3,7 @@
 #run this in the folder that you want to have your ansible playbook config
 
 mkdir group_vars roles
-touch sites.yml
+touch site.yml
  
 for i in common bind nginx mysql php-fpm wordpress
 
